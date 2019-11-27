@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Test</title>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+       
+        <script type="module" src="LibraryB.js"></script>
+        <script src="library.js"></script>
+        <script>
+            window.onload = function() {
+              $('button').on('click', function(event) {
+                console.log("event is ", event);
+                $('button').css('color', 'red');
+                var x = $('p.title').text();
+                console.log(x)
+                $('p.temp').text(x);
+                console.log($('p.temp').text())
+
+              });
+              $('p.title').on('mouseover', function(event) {
+                console.log("blur event is ", event);
+              });
+            }
+        </script>
+    </head>
+    <body>
+       <div style="text-align: center; margin-top:50px">
+        <p class="title">hello this is test</p>
+        <button type="button">Click Me!</button>
+        <p class="temp">add value here</p>
+        </div>
+        
+    </body>
+</html>
